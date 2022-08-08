@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url('http://fonts.cdnfonts.com/css/pencil-2');
+p{
+    
+    font-size:15px;
+   
+}
+
+#plan{
+    font-family: 'Pencil', sans-serif;
+    font-size:35px;
+    text-decoration: underline;
+}
+
+
+.Main{
+    background: url('../../SunProtection/b7c3ec26c4e3f12e06af33af375bd97.png') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(8, 8, 8, 0.472);
+  max-height: 70vh;
+}
+
+#Navbar{
+ 
+    color:transparent !important;
+  
+}
+
+.navbar-inner {
+    background:transparent !important; 
+}
+
+.container2{
+    width:"100%";
+}
+
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+ margin-left:70%
+  }
+  
+  .Reservation {
+      margin-left: 80%;
+      border-style: solid;
+      border-color: red;
+      border-width: 1px;
+  }
+
+  .About {
+    width: 80%;
+  min-height: 60vh;
+
+  margin: auto;
+  }
+
+  .footer_main p{
+      color: white;
+      text-align: center;
+  }
+
+.nav-link{
+    color: white;
+    font-size: 20px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+.card{
+    width: 90%;
+   
+}
+
+.Uv{
+    background-color: rgb(240, 120, 96);
+  min-height: 30vh;
+}
+
+.btn {
+    background-color: rgb(240, 120, 96);
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.disease{
+    background-color: rgb(240, 120, 96);
+  min-height: 30vh;
+}
+
+.protection{
+    background-color: rgb(240, 120, 96);
+  min-height: 30vh;
+}
