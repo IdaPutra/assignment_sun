@@ -94,7 +94,7 @@ function Uv_Impact(){
   },[]);
 
   useEffect(() => {
-    get_uv()
+    change_value()
   },[uv_data]);
     
     return(
