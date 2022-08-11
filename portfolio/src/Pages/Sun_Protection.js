@@ -12,16 +12,7 @@ import { bounce } from 'react-animations';
 import axios from "axios";
 import Cookies from 'universal-cookie';
 import Footer from "../Components/Footer";
-import {
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavItem,
-    MDBNavLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBContainer
-  } from 'mdbreact';
+
   import skin_disease_image from '../Components/skin_disease.jpg'
 import skin_protection_image from '../Components/sun_protection.jpg'
 import uv_image from '../Components/UV_Impact.jpg'

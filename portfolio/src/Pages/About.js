@@ -11,16 +11,7 @@ import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
 import axios from "axios";
 import Cookies from 'universal-cookie';
-import {
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavItem,
-    MDBNavLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBContainer
-  } from 'mdbreact';
+
 function About(){
  
     return(

@@ -12,16 +12,7 @@ import { bounce } from 'react-animations';
 import axios from "axios";
 import Cookies from 'universal-cookie';
 import Footer from "../Components/Footer";
-import {
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavItem,
-    MDBNavLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBContainer
-  } from 'mdbreact';
+
 function Skin_disease(){
  
     return(
@@ -37,7 +28,7 @@ function Skin_disease(){
 </h1><br></br>
         <br></br>
         </div>
-<div className="container">
+        <div className="container">
 <div className="row">
     <div className="col-12">
     <br></br>
@@ -101,7 +92,6 @@ UV damage is accumulative. Your skin remembers and records all the UV exposure o
 </div>
   
 </div>
-
 <br></br>
 <br></br>
 <br></br>

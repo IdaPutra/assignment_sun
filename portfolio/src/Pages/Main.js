@@ -14,16 +14,7 @@ import Cookies from 'universal-cookie';
 import uv_image from '../Components/UV_Impact.jpg'
 import skin_disease_image from '../Components/skin_disease.jpg'
 import skin_protection_image from '../Components/sun_protection.jpg'
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBContainer
-} from 'mdbreact';
+
 import About from './About'
 import Uv_Impact from "./Uv_Impact";
 import Footer from "../Components/Footer";

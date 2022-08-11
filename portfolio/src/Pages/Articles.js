@@ -12,16 +12,7 @@ import { bounce } from 'react-animations';
 import axios from "axios";
 import Cookies from 'universal-cookie';
 import { Link, useParams } from 'react-router-dom';
-import {
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavItem,
-    MDBNavLink,
-    MDBNavbarToggler,
-    MDBCollapse,
-    MDBContainer
-  } from 'mdbreact';
+
 function Articles(){
  
     const [article_data,setArticle_data] = useState() 
