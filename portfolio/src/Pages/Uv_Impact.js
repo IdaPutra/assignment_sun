@@ -1,4 +1,3 @@
-
    
 import React, { useState, useEffect } from "react";
 
@@ -64,7 +63,7 @@ function Uv_Impact(){
   };
 
   function change_value(){
-    if(uv_data < 3) {
+    if(uv_data < 3 && uv_data==0) {
       setLevel('Low');
       setImage(Sun_Good);
       setLanguage('UV is Safe, Dont forget to put Sunscreen tho!');
@@ -76,7 +75,7 @@ function Uv_Impact(){
       setLanguage('UV Is getting A Bit Unsafe, Use Sunscreen and Umbrella!');
     }
 
-    else{
+    else if (uv_data >11){
       setLevel('Danger');
       setImage(Sun_Hard);
       setLanguage('UV is Dangerous, stay inside!!! ');
@@ -94,7 +93,7 @@ function Uv_Impact(){
   },[]);
 
   useEffect(() => {
-    get_uv()
+    change_value()
   },[uv_data]);
     
     return(

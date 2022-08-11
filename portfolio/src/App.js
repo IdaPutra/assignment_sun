@@ -7,6 +7,7 @@ import Main from "./Pages/Main"
 import Uv_Impact from "./Pages/Uv_Impact.js";
 import Sun_Protection from "./Pages/Sun_Protection.js";
 import Skin_disease from "./Pages/Skin_disease.js";
+import Articles from "./Pages/Articles.js"
 import './index.css'
 
 
@@ -25,6 +26,7 @@ function App() {
          <Route path="/uv" element={ <Uv_Impact/>} exact />
          <Route path="/protection" element={ <Sun_Protection/>} exact />
          <Route path="/skin" element={ <Skin_disease/>} exact />
+         <Route path="/protection/articles/:id" element={ <Articles/>} exact />
        
         </Routes>
       </div>
