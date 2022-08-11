@@ -25,93 +25,118 @@ import {
   import skin_disease_image from '../Components/skin_disease.jpg'
 import skin_protection_image from '../Components/sun_protection.jpg'
 import uv_image from '../Components/UV_Impact.jpg'
+import Articles from "./Articles"
+import {
+        BrowserRouter as Router,
+        Switch,
+        Route,
+        Link
+      } from "react-router-dom";
 function Sun_Protection(){
- 
-    return(
-        < >
 
- 
-      <div className="protection">
-      <Navbar1/>
-        <br></br>
-        <br></br>
-        <h1 style={{textAlign:"center",color:"white"}}>Sun Protection
-
-</h1><br></br>
-        <br></br>
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        const[all_article,setAll_article]=useState()
         
-<div className="container">
-<h1 >Tips For Sun Protection </h1>
-<br></br>
-        <br></br>
-<div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NXw9tqrW6iM" allowfullscreen></iframe>
-          </div>
-  <br></br>
-  <br></br>
-  <br></br>
-        <br></br>
-        <br></br>
+
+        const get__all_article = async () => {
+                try {
+          
+                        
+          
+                    const resp = await axios.get(`https://dry-garden-75327.herokuapp.com/api/articles?populate=*`);
+                   setAll_article(resp.data.data)
+                    console.log(resp.data.data);
+                //     setArticle_data(resp.data);
+                } catch (err) {
+                    // Handle Error Here
+                    console.error(err);
+                }
+            };
+
+            useEffect(() => {
+                get__all_article()
+              },[]);
  
-        <h1 >More Tips</h1>
-        <br></br>
-        <br></br>
-        <div>
-        <div className="row ">
+
+
+           
+            if(all_article){
+                return(
+                        < >
+                
+                 
+                      <div className="protection">
+                      <Navbar1/>
+                        <br></br>
+                        <br></br>
+                        <h1 style={{textAlign:"center",color:"white"}}>Sun Protection
+                
+                </h1><br></br>
+                        <br></br>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        
+                <div className="container">
+                <h1 >Tips For Sun Protection </h1>
+                <br></br>
+                        <br></br>
+                <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NXw9tqrW6iM" allowfullscreen></iframe>
+                          </div>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                        <br></br>
+                        <br></br>
+                 
+                        <h1 >More Tips</h1>
+                        <br></br>
+                        <br></br>
+                        <div>
+                        <div className="row ">
+           
+                   
+             
+                        {all_article.map((article)=> {
+                                return(
+                                        <div className="col-4">
+                                        <div class="card">
+                                        <img src={"https://dry-garden-75327.herokuapp.com"+article.attributes.article_image.data.attributes.url} class="card-img-top" alt="Fissure in Sandstone" style={{height:"268px"}}/>
+                                        
+                                        </div>
+                                        <br></br>
+                                        <h5 class="card-title"  style={{textAlign:"center"}}>{article.attributes.Title}</h5>
+                                        
+                                         <br></br>
+                                         <Link to={"articles/" + article.id }><a href="#" class="btn btn-primary" style={{marginLeft:"38%"}}>Discover</a></Link>
+                                        </div>
+                                )
+                         
+                 })}
+             
+                </div>
+                        </div>
+                 
+                </div>
+                
+                <br></br>
+                <br></br>
+                <br></br>
+                <Footer/>
+                        </>
+                    )
+
+            }
+
+            else{
+                return(
+                        <>
+                        </>
+                )
+            }
  
-   
- <div className="col-4">
-<div class="card">
-<img src={skin_protection_image} class="card-img-top" alt="Fissure in Sandstone" style={{height:"268px"}}/>
-
-</div>
-<br></br>
-<h5 class="card-title"  style={{textAlign:"center"}}>UV Impact</h5>
-
- <br></br>
- <a href="#" class="btn btn-primary" style={{marginLeft:"38%"}}>Discover</a>
-</div>
-<div className="col-4">
-<div class="card">
-<img src={skin_disease_image} class="card-img-top" alt="Fissure in Sandstone" style={{height:"268px"}}/>
-
-</div>
-<br></br>
-<h5 class="card-title"  style={{textAlign:"center"}}>Skin Disease
-
-</h5>
-
- <br></br>
- <a href="#" class="btn btn-primary" style={{marginLeft:"38%"}}>Discover</a>
-</div>
-<div className="col-4">
-<div class="card">
-<img src={uv_image} class="card-img-top" alt="Fissure in Sandstone" style={{height:"268px"}}/>
-
-</div>
-<br></br>
-<h5 class="card-title" style={{textAlign:"center"}} > Protection Guideline</h5>
-
- <br></br>
- <a href="#" class="btn btn-primary " style={{marginLeft:"38%"}}>Discover</a>
-</div>
-
-</div>
-        </div>
- 
-</div>
-
-<br></br>
-<br></br>
-<br></br>
-<Footer/>
-        </>
-    )
 }
 
 export default (Sun_Protection);
